@@ -2,8 +2,13 @@ using Company.Data.Context;
 using Company.Repository.Interfaces;
 using Company.Repository.Repositories;
 using Company.Service.Interfaces;
+<<<<<<< HEAD
 using Company.Service.Mapping;
 using Company.Service.Services;
+=======
+using Company.Service.Services;
+using Company.Service.Services.Employee;
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
 using Microsoft.EntityFrameworkCore;
 
 
@@ -26,11 +31,15 @@ namespace company.Web
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IDepartmentService, DepartmentService>();
             builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+<<<<<<< HEAD
             //builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>(); 
             builder.Services.AddAutoMapper(x => x.AddProfile<EmployeeProfile>());
             builder.Services.AddAutoMapper(x => x.AddProfile<DepartmentProfile>());
 
 
+=======
+            //builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
 
 
             var app = builder.Build();

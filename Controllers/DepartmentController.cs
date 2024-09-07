@@ -1,7 +1,10 @@
 ﻿using Company.Data.Models;
 using Company.Repository.Interfaces;
 using Company.Service.Interfaces;
+<<<<<<< HEAD
 using Company.Service.Interfaces.Department.Dto;
+=======
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,7 +20,11 @@ namespace company.Web.Controllers
             _departmentservice = departmentservice;
         }
 
+<<<<<<< HEAD
         //public IDepartmentService Departmentservice { get; }
+=======
+        public IDepartmentService Departmentservice { get; }
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
 
         public IActionResult Index()
         {
@@ -30,7 +37,11 @@ namespace company.Web.Controllers
             return View();
         }
         [HttpPost]
+<<<<<<< HEAD
         public IActionResult Create(DepartmentDto department)
+=======
+        public IActionResult Create(Department department)
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
         {
             try
             {
@@ -72,9 +83,15 @@ namespace company.Web.Controllers
             return Details(id, "Update");
         }
         [HttpPost]
+<<<<<<< HEAD
         public IActionResult Update(int? id, DepartmentDto department)
         {
             if (department.Id != id.Value)
+=======
+        public IActionResult Update(int? id, Department department)
+        {
+            if (department.id != id.Value)
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
                 return RedirectToAction("notfound", null, "Home");
             _departmentservice.Update(department);
 
