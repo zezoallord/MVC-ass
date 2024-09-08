@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+<<<<<<< HEAD
+@model DepartmentDto
+=======
+@model Department
+>>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
+@{
+    ViewData["Title"] = "Update";
+}
+}
+
+<h1>Create New Department</h1>
+<br />
+<br />
+
+
+<form asp-action="Update">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input type="text" asp-for="Code" class="form-control" />
+         <span asp-validation-for="Code" class="text-danger"></span> 
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+         <span asp-validation-for="Name" class="text-danger"></span> 
+    </div>
+    <div>
+    </div>
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
