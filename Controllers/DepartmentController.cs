@@ -1,34 +1,21 @@
-﻿using Company.Data.Models;
-using Company.Repository.Interfaces;
-using Company.Service.Interfaces;
-<<<<<<< HEAD
+﻿using Company.Service.Interfaces;
 using Company.Service.Interfaces.Department.Dto;
-=======
->>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
-namespace company.Web.Controllers
+namespace Company.Web.Controllers
 {
     public class DepartmentController : Controller
     {
-        private readonly IDepartmentService _departmentservice;
-
-        public DepartmentController(IDepartmentService departmentservice)
+        private readonly IDepartmentService _departmentService;
+        public DepartmentController(IDepartmentService departmentService)
         {
-
-            _departmentservice = departmentservice;
+            _departmentService = departmentService;
         }
-
-<<<<<<< HEAD
-        //public IDepartmentService Departmentservice { get; }
-=======
-        public IDepartmentService Departmentservice { get; }
->>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
-
-        public IActionResult Index()
+        // GET: DepartmentController
+        public ActionResult Index()
         {
-            var departments = _departmentservice.GetAll();
+            var departments = _departmentService.GetAll();
+            // TempData.Keep("TextTempMessage");
             return View(departments);
         }
         [HttpGet]
@@ -37,76 +24,60 @@ namespace company.Web.Controllers
             return View();
         }
         [HttpPost]
-<<<<<<< HEAD
         public IActionResult Create(DepartmentDto department)
-=======
-        public IActionResult Create(Department department)
->>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
         {
             try
             {
-
                 if (ModelState.IsValid)
                 {
-
-                    _departmentservice.Add(department);
-
+                    _departmentService.Add(department);
+                    // TempData["TextTempMessage"] = "Hello From Employee Index (TempData)";
                     return RedirectToAction(nameof(Index));
                 }
-
                 ModelState.AddModelError("DepartmentError", "Validation Error");
+
                 return View(department);
             }
             catch (Exception ex)
             {
-
                 ModelState.AddModelError("DepartmentError", ex.Message);
                 return View(department);
-
             }
         }
+
         public IActionResult Details(int? id, string viewName = "Details")
         {
-            var department = _departmentservice.GetbyId(id);
-
-            if (department == null)
-            {
-                return RedirectToAction("notfound", null, "Home");
-            }
+            var department = _departmentService.GetbyId(id);
+            if (department is null)
+                return RedirectToAction("NotFoundPage", null, "Home");
 
             return View(viewName, department);
         }
+
         [HttpGet]
         public IActionResult Update(int? id)
         {
-
             return Details(id, "Update");
         }
+
         [HttpPost]
-<<<<<<< HEAD
         public IActionResult Update(int? id, DepartmentDto department)
         {
             if (department.Id != id.Value)
-=======
-        public IActionResult Update(int? id, Department department)
-        {
-            if (department.id != id.Value)
->>>>>>> 4e7271227ef2f56002153a674b19f1451a9818c9
-                return RedirectToAction("notfound", null, "Home");
-            _departmentservice.Update(department);
+                return RedirectToAction("NotFoundPage", null, "Home");
 
+            _departmentService.Update(department);
             return RedirectToAction(nameof(Index));
         }
-        
+
         public IActionResult Delete(int id)
         {
-            var department = _departmentservice.GetbyId(id);
-            if (department == null)
-                return RedirectToAction("notfound", null, "Home");
-            _departmentservice.Delete(department);
+            var department = _departmentService.GetbyId(id);
+            if (department is null)
+                return RedirectToAction("NotFoundPage", null, "Home");
+
+            _departmentService.Delete(department);
             return RedirectToAction(nameof(Index));
         }
-
-
-    }   
+    }
 }
