@@ -3072,11 +3072,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zeyad\\source\\repos\\Company.Service\\Company.Service.csproj",
+      "projectUniqueName": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Company.Service\\Company.Service.csproj",
       "projectName": "Company.Service",
-      "projectPath": "C:\\Users\\zeyad\\source\\repos\\Company.Service\\Company.Service.csproj",
+      "projectPath": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Company.Service\\Company.Service.csproj",
       "packagesPath": "C:\\Users\\zeyad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zeyad\\source\\repos\\Company.Service\\obj\\",
+      "outputPath": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Company.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zeyad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3094,8 +3094,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\zeyad\\source\\repos\\Company.Repository\\Company.Repository.csproj": {
-              "projectPath": "C:\\Users\\zeyad\\source\\repos\\Company.Repository\\Company.Repository.csproj"
+            "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Company.Repository\\Company.Repository.csproj": {
+              "projectPath": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Company.Repository\\Company.Repository.csproj"
             }
           }
         }

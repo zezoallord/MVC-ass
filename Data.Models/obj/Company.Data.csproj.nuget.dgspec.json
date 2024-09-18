@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zeyad\\source\\repos\\Data.Models\\Company.Data.csproj": {}
+    "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Data.Models\\Company.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zeyad\\source\\repos\\Data.Models\\Company.Data.csproj": {
+    "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Data.Models\\Company.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zeyad\\source\\repos\\Data.Models\\Company.Data.csproj",
+        "projectUniqueName": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Data.Models\\Company.Data.csproj",
         "projectName": "Company.Data",
-        "projectPath": "C:\\Users\\zeyad\\source\\repos\\Data.Models\\Company.Data.csproj",
+        "projectPath": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Data.Models\\Company.Data.csproj",
         "packagesPath": "C:\\Users\\zeyad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zeyad\\source\\repos\\Data.Models\\obj\\",
+        "outputPath": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zeyad\\AppData\\Roaming\\NuGet\\NuGet.Config",

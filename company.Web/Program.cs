@@ -52,7 +52,7 @@ public class Program
             options.LoginPath = "/Account/Login";
             options.LogoutPath = "/Account/Logout";
             options.AccessDeniedPath = "/Account/AccessDenied";
-            options.Cookie.Name = "zezoallord Cookies";
+            options.Cookie.Name = "zezoallordCookies";
             options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
             options.Cookie.SameSite = SameSiteMode.Strict;
         });
@@ -81,7 +81,7 @@ public class Program
 
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            pattern: "{controller=Account}/{action=SignUp}/{id?}");
 
         app.Run();
     }

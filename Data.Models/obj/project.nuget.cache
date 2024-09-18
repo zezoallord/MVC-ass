@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KBxn76ZOJNo=",
+  "dgSpecHash": "JcO42wDduzc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zeyad\\source\\repos\\Data.Models\\Company.Data.csproj",
+  "projectFilePath": "C:\\Users\\zeyad\\MVC-ass\\company.Web\\Data.Models\\Company.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zeyad\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\zeyad\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
